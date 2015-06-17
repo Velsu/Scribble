@@ -3,26 +3,24 @@
 %html
 %head
 	%title Scribble
+	%meta{:name => "viewport", :content => "width=device-width; initial-scale=1.0; maximum-scale=1.0;"}
 	= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
 	= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:400,700,300"
 	= javascript_include_tag 'application', 'data-turbolinks-track' => true
 	= csrf_meta_tags
 
 %body
-	%header.main_header.clearfix
-		.wrapper
-			#logo
-				%p= link_to "Scribble", root_url
-			#buttons
+	%header
+		.inner_header
+			= link_to "Scribble", root_url, id: "logo"
+			%nav
 				- if user_signed_in?
-					= link_to "New Post", new_note_path
+					= link_to "New Note", new_note_path
 					= link_to "Log out", destroy_user_session_path, method: :delete
 				- else
 					= link_to "Sign up", new_user_registration_path
-					= link_to "Sign in", new_user_session_path
+					= link_to "Log in", new_user_session_path
 
-	.wrapper
-		%p.notice= notice
-		%p.alert= alert
-	.wrapper
-		=yield
+	%p.notice= notice
+	%p.alert= alert
+	=yield
