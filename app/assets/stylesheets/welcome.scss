@@ -16,6 +16,7 @@
 		max-width: 34%;
 		padding: 6rem;
 		background-color: rgba(0,0,0,0.3);
+		border-radius: 0.5rem;
 		h1 {
 			@include font_bold;
 			color: $hcolor;
@@ -28,7 +29,7 @@
 			color: rgba(250,220,250,0.8);
 			.main_button {
 				color: white;
-				background-color: #BA55D3;
+				background-color: $deep_purple;
 				padding: 0.6rem;
 				@include font_bold;
 			}

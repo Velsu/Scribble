@@ -1,6 +1,7 @@
 $dark_gray: #2B2E2E;
 $light_gray: #C0C1C1;
 $hcolor: #FAE898;
+$deep_purple: #BA55D3;
 
 @mixin font_bold {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
@@ -58,7 +59,7 @@ header {
 
 a {
 	text-decoration: none;
-	color: $hcolor;
+	color: purple;
 	&:hover {
 		color: $dark_gray;
 	}
@@ -82,4 +83,28 @@ display: table;
 }
 .clearfix:after {
 clear: both;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+	width: 100%;
+	margin-bottom: 1rem;
+	border: 1px solid $light_gray;
+	border-radius: .4rem;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+	height: 40px;
+}
+
+textarea {
+	min-height: 200px;
+}
+
+.button {
+	background: blue;
+	margin-top: 0.25rem;
+	a{
+		color: white;
+		text-decoration: none;
+	}
 }

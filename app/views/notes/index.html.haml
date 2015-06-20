@@ -1,5 +1,14 @@
-- @notes.each do |note|
-	%h2= link_to note.title, note
-	%p= time_ago_in_words(note.created_at)
-
-= link_to "New Note", new_note_path
+.wrapper_with_padding
+	#notes
+		- unless @notes.blank?
+			- @notes.each do |note|
+				%a{ href: (url_for [note]) }
+					.note
+						%h3.title= note.title
+						%p.date
+							= time_ago_in_words(note.created_at)
+							ago
+		- else
+			%h2 Add a New Note
+			%p Seems there is nothing here yet!
+			%button= link_to "New Note", new_note_path
