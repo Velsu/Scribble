@@ -6,7 +6,7 @@
 	background: url(image_path("notebook.jpg")) no-repeat center center fixed;
 	background-size: cover;
 	overflow: hidden;
-	height: 1255px;
+	height: 50rem;
 	padding-top: 5rem;
 }
 
@@ -46,19 +46,15 @@ footer {
 	width: 100%;
 }
 
-@media (max-width: 1140px) {
+@media (min-width: 2440px) {
 		#banner {
-			height: 700px;
+			height: 79rem;
 		}
-    .banner_content {
-        max-width: 50%;
-        margin: 0 auto;
-    }
 }
 
-@media (min-width: 280px)and (max-width: 780px) {
+@media (min-width: 280px) and (max-width: 980px) {
 		#banner {
-			height: 500px;
+			height: 50rem;
 		}
     .banner_content {
         max-width: 100%;

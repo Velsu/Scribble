@@ -1,6 +1,6 @@
 .wrapper_with_padding
-	#notes
-		- unless @notes.blank?
+	#notes.clearfix
+		- unless current_user.notes.blank?
 			- @notes.each do |note|
 				%a{ href: (url_for [note]) }
 					.note
