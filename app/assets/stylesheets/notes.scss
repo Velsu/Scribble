@@ -36,6 +36,20 @@
 		margin: 1rem 1%;
 		padding: 1.5rem 2.5%;
 		border-radius: .4rem;
-		display: inline-block
+		display: inline-block;
+		@include transitions;
+		.title {
+			@include font_bold;
+			color: $hcolor;
+			margin: 0;
+			letter-spacing: 1px;
+		}
+		.date {
+			color: white;
+			font-size: .85rem;
+		}
+		&:hover {
+			@include shadows
+		}
 	}
 }

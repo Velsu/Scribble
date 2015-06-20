@@ -9,6 +9,22 @@ $deep_purple: #BA55D3;
 	text-transform: uppercase;
 }
 
+@mixin transitions {
+		-webkit-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -kthtml-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+
+}
+
+@mixin shadows {
+		-webkit-box-shadow: 0px 0px 4px 2px $deep_purple;
+    -moz-box-shadow: 0px 0px 4px 2px $deep_purple;
+    box-shadow: 0px 0px 4px 2px $deep_purple;
+}
+
 * {
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
