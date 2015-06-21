@@ -124,3 +124,9 @@ textarea {
 		text-decoration: none;
 	}
 }
+
+.notice,
+.alert {
+	color: $deep_purple;
+	font-size: 1.25rem;
+}
