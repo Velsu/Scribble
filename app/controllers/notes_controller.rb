@@ -4,7 +4,7 @@ class NotesController < ApplicationController
 	before_action :authenticate_user!
 
 	def index
-		@notes = Note.all.order(created_at: :desc)
+		@notes = Note.paginate(page: params[:page], per_page: 12).order(created_at: :desc)
 	end
 
 	def show
