@@ -243,3 +243,13 @@ footer {
 		display: none;
 	}
 }
+
+.new_button {
+			padding: .25rem 1rem;
+			border-radius: 1rem;
+			text-decoration: none;
+			color: $deep_purple;
+			border: 5px solid #E9E9E9;
+			@include font_bold;
+			background: transparent;
+}

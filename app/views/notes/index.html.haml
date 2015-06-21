@@ -11,6 +11,6 @@
 		- else
 			%h2 Add a New Note
 			%p Seems there is nothing here yet!
-			%button= link_to "New Note", new_note_path
+			= link_to "New Note", new_note_path, class: "new_button"
 
 = will_paginate @notes, class: "pagination"
